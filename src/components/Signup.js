@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import './login.css';
 
-const Login = () => (
+const Signup = () => (
   <div className="logIn d-flex flex-column justify-content-center align-items-center">
     <div className="header text-white p-5">
-      <h1>Log In</h1>
-      <p>Hello there! Sign in here</p>
+      <h1>Sign Up</h1>
+      <p>Create an account here</p>
     </div>
     <div className="form">
       <form className="input-group">
@@ -22,9 +22,9 @@ const Login = () => (
     </div>
     <div className="forgot text-white p-5">
       <p>Forgot Password?</p>
-      <Link to="/signup">Sign up</Link>
+      <Link to="/">Log In</Link>
     </div>
   </div>
 );
 
-export default Login;
+export default Signup;
