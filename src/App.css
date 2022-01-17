@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+body {
+  font-family: 'Arimo', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +11,14 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.logIn {
+  background-image: url('./computer.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +46,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
