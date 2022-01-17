@@ -6,9 +6,9 @@
 .submitBtn {
   margin: auto;
   color: white;
-  background-color: #FF5617;
-  border: #FF5617;
-  box-shadow: -1px -1px 16px 0px #FF5617;
--webkit-box-shadow: -1px -1px 16px 0px #FF5617;
--moz-box-shadow: -1px -1px 16px 0px #FF5617;
+  background-color: #ff5617;
+  border: #ff5617;
+  box-shadow: -1px -1px 16px 0 #ff5617;
+  -webkit-box-shadow: -1px -1px 16px 0 #ff5617;
+  -moz-box-shadow: -1px -1px 16px 0 #ff5617;
 }
