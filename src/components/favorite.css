@@ -1,10 +1,30 @@
+.topCont,
+.descriptionCont {
+  background-color: #F7F5FA;
+}
+
 .previewCont {
  background-image: url('./pc.png');
  height: 400px;
- width: 100%;
+ min-width: 100%;
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
+}
+
+.insideDescr {
+  background-color: rgba(0, 0, 0, 0.605);
+  height: 400px;
+  min-width: 100%;
+  background: linear-gradient(360deg, rgba(0,0,0,0.605) 0%, rgba(255, 255, 255, 0) 30%);
+}
+
+.textBox {
+  min-width: 100px;
+}
+
+.infoCont {
+  color: white;
 }
 
 .orange {
