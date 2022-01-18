@@ -1,22 +1,22 @@
 .topCont,
 .descriptionCont {
-  background-color: #F7F5FA;
+  background-color: #f7f5fa;
 }
 
 .previewCont {
- background-image: url('./pc.png');
- height: 400px;
- min-width: 100%;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
+  background-image: url('./pc.png');
+  height: 400px;
+  min-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .insideDescr {
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.605) 0%, rgba(255, 255, 255, 0) 30%);
   background-color: rgba(0, 0, 0, 0.605);
   height: 400px;
   min-width: 100%;
-  background: linear-gradient(360deg, rgba(0,0,0,0.605) 0%, rgba(255, 255, 255, 0) 30%);
 }
 
 .textBox {
