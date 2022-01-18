@@ -1,0 +1,21 @@
+.previewCont {
+ background-image: url('./pc.png');
+ height: 400px;
+ width: 100%;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.orange {
+  background-color: #ff5617;
+}
+
+.processorPic {
+  background-image: url('./intel.png');
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
