@@ -3,7 +3,7 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import computersReducer from './computers/computers';
 import favoritesReducer from './favorite/favorite';
-import computerReducer from './items/item';
+import computerReducer from './computers/computer';
 import usersReducer from './users/users';
 
 const reducers = combineReducers({
