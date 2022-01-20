@@ -1,0 +1,36 @@
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.computer-item:hover {
+  transform: scale(1.1);
+}
+
+.computers-container {
+  display: flex;
+  overflow-x: auto;
+  height: 600px;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.computer-img {
+  width: 250px;
+}
+
+.card {
+  border: none !important;
+}
+
+.card-body {
+  width: 270px;
+}
+
+.computer-information {
+  display: flex;
+  font-size: smaller;
+  text-align: left;
+}

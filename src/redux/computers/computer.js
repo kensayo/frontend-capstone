@@ -18,7 +18,7 @@ export const getComputers = () => async (dispatch) => {
     });
 };
 
-const reducer = (state = initialState, action) => {
+const ComputerReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_COMPUTERS:
       console.log(action.payload.data);
@@ -27,4 +27,4 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
-export default reducer;
+export default ComputerReducer;
