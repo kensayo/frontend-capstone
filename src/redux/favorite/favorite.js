@@ -22,7 +22,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_FAVORITES:
       // return action.payload.data.sort(() => 0.5 - Math.random());
-      console.log(action.payload.data);
+      // console.log(action.payload.data);
       return action.payload.data;
     default:
       return state;

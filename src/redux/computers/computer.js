@@ -1,30 +1,28 @@
 // http://localhost:3000/api/v1/computers
-import axios from 'axios';
+const SET_COMPUTER = 'frontend-capstone/computer/SET_COMPUTER';
+const URL = 'http://localhost:3000/api/v1/computers';
 
-const GET_COMPUTERS = 'GET_COMPUTERS';
-const API_URL = 'http://localhost:3001/api/v1/computers';
+const initialState = {
+  computer: [],
+};
+const setComputer = (payload) => ({
+  type: SET_COMPUTER,
+  payload,
+});
 
-const initialState = [];
-
-export const getComputers = () => async (dispatch) => {
-  await axios.get(API_URL, {
-    method: 'GET',
-  })
-    .then((response) => {
-      dispatch({
-        type: GET_COMPUTERS,
-        payload: response,
-      });
-    });
+export const fetchComputer = (id) => (dispatch) => {
+  fetch(`${URL}/${id}`)
+    .then((response) => response.json())
+    .then((data) => dispatch(setComputer(data)));
 };
 
-const ComputerReducer = (state = initialState, action) => {
+const computerReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_COMPUTERS:
-      console.log(action.payload.data);
-      return action.payload.data;
+    case SET_COMPUTER:
+      return { ...state, computer: action.payload };
     default:
       return state;
   }
 };
-export default ComputerReducer;
+
+export default computerReducer;
