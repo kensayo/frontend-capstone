@@ -25,7 +25,7 @@ const Home = () => {
         { computersState.map((computer) => (
 
           <div className=" computer-item p-2" key={computer.id}>
-            <Link to={`/computer/${computer.id}`}>
+            <Link to={`/computer/${computer.id}`} style={{ textDecoration: 'none', color: '#212529' }}>
               <div className="card">
                 <div className="card-body">
 

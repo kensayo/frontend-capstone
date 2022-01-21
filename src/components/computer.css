@@ -1,0 +1,27 @@
+.computer-img {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.add-favorites {
+  background-color: #ff6026 !important;
+  color: white;
+}
+
+.computer-title,
+.computer-text {
+  text-align: left;
+}
+.computer-title {
+  font-weight: bold;
+}
+
+@media (min-width: 550px) {
+  .computer-card {
+    width: 400px;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+  }
+}
