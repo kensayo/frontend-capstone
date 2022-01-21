@@ -6,6 +6,7 @@ import Home from './Home';
 import Login from './Login';
 import Signup from './Signup';
 import Favorite from './Favorite';
+import Navbar from './Navbar';
 
 const Routing = () => (
   <Router>
@@ -14,6 +15,7 @@ const Routing = () => (
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />
       <Route exact path="/fav" element={<Favorite />} />
+      <Route exact path="/nav" element={<Navbar />} />
     </Routes>
   </Router>
 );

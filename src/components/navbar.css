@@ -1,0 +1,59 @@
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #FFF;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger {
+  background-color: #000;
+}
+
+/*
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-10px, -6px);
+}
+*/
+
+.mobile-nav {
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  z-index: 98;
+  padding-top: 120px;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.navLink {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: black;
+  color: #FFF;
+  text-decoration: none;
+}
