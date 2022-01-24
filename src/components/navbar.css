@@ -1,13 +1,10 @@
-body {
-  background: #fbc02d;
-}
 .cont {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #4527a0;
+  /*background: rgb(247, 245, 250);*/
   padding: 0.25px;
   transition: 0.3s;
 }
@@ -43,7 +40,7 @@ body {
 }
 
 .menu li a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   display: block;
   padding: 40px 25px;
@@ -53,7 +50,7 @@ body {
 }
 
 .menu li a:hover {
-  box-shadow: 0 -5px 0px #fff inset, 
+  box-shadow: 0 -5px 0px #ff5617 inset, 
   500px 00 rgba(255, 255, 255, 0.03) inset;
   padding: 35px 25px 45px 25px;
 }
@@ -62,7 +59,7 @@ body {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #fff;
+  background: #000;
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
@@ -75,7 +72,7 @@ body {
   position: absolute;
   height: 4px;
   right: 0;
-  background: #fff;
+  background: #000;
   border-radius: 10px;
   transition: 0.3s;
 }
@@ -143,7 +140,7 @@ body {
     position: fixed;
     top: 0;
     left: -300px;
-    background: #4527a0;
+    /*background: rgb(247, 245, 250);*/
     width: 300px;
     height: 100%;
     padding-top: 65px;
