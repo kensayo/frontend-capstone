@@ -18,7 +18,7 @@ const Home = () => {
     <div className="computer-detailed">
       <nav className="home-nav m-4">
         <Link to="/" style={{ textDecoration: 'none', color: '#212529' }}><i className="fa fa-angle-left" aria-hidden="true" /></Link>
-        <h1>{`${(computer.brand).toUpperCase()} computer` }</h1>
+        <h1>{`${computer.brand} computer` }</h1>
         <div>
           <i className="fa fa-search align-middle" aria-hidden="true" />
         </div>
