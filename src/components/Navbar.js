@@ -18,6 +18,7 @@ const Navbar = () => (
               </div>
             </div>
           </li>
+          <li><Link to="/" className="navLink">Home</Link></li>
           <li><Link to="/fav" className="navLink">Favorites</Link></li>
           <li><Link to="/login" className="navLink">Login</Link></li>
           <li><Link to="/signup" className="navLink">Signup</Link></li>
