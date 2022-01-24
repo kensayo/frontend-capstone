@@ -10,6 +10,7 @@ import Navbar from './Navbar';
 
 const Routing = () => (
   <Router>
+    <Navbar />
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/login" element={<Login />} />
