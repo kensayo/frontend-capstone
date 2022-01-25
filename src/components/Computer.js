@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { fetchComputer } from '../redux/computers/computer';
-import './home.css';
-import './computer.css';
+import './assets/home.css';
+import './assets/computer.css';
 
 const Home = () => {
   const { id } = useParams();

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchComputers } from '../redux/computers/computers';
-import './home.css';
+import './assets/home.css';
 
 const Home = () => {
   const dispatch = useDispatch();

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 import { signinUser } from '../redux/users/user';
-import './login.css';
+import './assets/login.css';
 
 const Login = () => {
   const navigate = useNavigate();
