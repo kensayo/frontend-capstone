@@ -1,7 +1,10 @@
-const POST_USER = 'frontend-capstone/user/POST_USER';
+const LOADING_USER = 'frontend-capstone/user/LOADING_USER';
 const POST_USER_SUCCESS = 'frontend-capstone/user/POST_USER_SUCCESS';
 const POST_USER_ERRORS = 'frontend-capstone/user/POST_USER_ERRORS';
 const POST_USER_FAILURE = 'frontend-capstone/user/POST_USER_FAILURE';
+export const SIGN_IN_SUCCESS = 'frontend-capstone/user/SIGN_IN_SUCCESS';
+export const SIGN_IN_ERRORS = 'frontend-capstone/user/SIGN_IN_ERRORS';
+export const SIGN_IN_FAILURE = 'frontend-capstone/user/SIGN_IN_FAILURE';
 const URL = 'http://localhost:3000/api/v1/users';
 
 const initialState = {
@@ -14,7 +17,7 @@ const initialState = {
 
 export const signupUser = ({ username, email, password }) => (dispatch) => {
   // console.log(user_name)
-  dispatch({ type: POST_USER });
+  dispatch({ type: LOADING_USER });
 
   fetch(URL, {
     method: 'POST',
@@ -45,10 +48,45 @@ export const signupUser = ({ username, email, password }) => (dispatch) => {
     });
 };
 
+export const signinUser = ({ email, password }) => (dispatch) => {
+  // console.log(user_name)
+  dispatch({ type: LOADING_USER });
+
+  fetch(`${URL}/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify({
+      email,
+      password,
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.failure) {
+        alert(data.failure);
+      }
+
+      if (data.user !== undefined) {
+        localStorage.setItem('token', data.jwt);
+        alert(data.success);
+        return dispatch({ type: SIGN_IN_SUCCESS, payload: data });
+      }
+      alert(data.errors.map((error) => error));
+      return dispatch({ type: SIGN_IN_ERRORS, payload: data });
+    })
+    .catch((err) => {
+      alert('Unable to SignIn At This Time');
+      return dispatch({ type: SIGN_IN_FAILURE, payload: err });
+    });
+};
+
 const userReducer = (state = initialState, action) => {
   let user = {};
   switch (action.type) {
-    case POST_USER:
+    case LOADING_USER:
       return { ...state, isLoading: true };
 
     case POST_USER_SUCCESS:
