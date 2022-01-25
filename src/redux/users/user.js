@@ -2,9 +2,9 @@ const LOADING_USER = 'frontend-capstone/user/LOADING_USER';
 const POST_USER_SUCCESS = 'frontend-capstone/user/POST_USER_SUCCESS';
 const POST_USER_ERRORS = 'frontend-capstone/user/POST_USER_ERRORS';
 const POST_USER_FAILURE = 'frontend-capstone/user/POST_USER_FAILURE';
-export const SIGN_IN_SUCCESS = 'frontend-capstone/user/SIGN_IN_SUCCESS';
-export const SIGN_IN_ERRORS = 'frontend-capstone/user/SIGN_IN_ERRORS';
-export const SIGN_IN_FAILURE = 'frontend-capstone/user/SIGN_IN_FAILURE';
+const SIGN_IN_SUCCESS = 'frontend-capstone/user/SIGN_IN_SUCCESS';
+const SIGN_IN_ERRORS = 'frontend-capstone/user/SIGN_IN_ERRORS';
+const SIGN_IN_FAILURE = 'frontend-capstone/user/SIGN_IN_FAILURE';
 const URL = 'http://localhost:3000/api/v1/users';
 
 const initialState = {
@@ -85,6 +85,7 @@ export const signinUser = ({ email, password }) => (dispatch) => {
 
 const userReducer = (state = initialState, action) => {
   let user = {};
+  let signinUser = {};
   switch (action.type) {
     case LOADING_USER:
       return { ...state, isLoading: true };
@@ -96,6 +97,18 @@ const userReducer = (state = initialState, action) => {
       };
 
     case POST_USER_FAILURE:
+      return { ...state, isLoading: false, error: action.payload };
+
+    case SIGN_IN_SUCCESS:
+      signinUser = action.payload.user;
+      return {
+        ...state, isLoading: false, user: signinUser, loggedIn: true,
+      };
+
+    case SIGN_IN_ERRORS:
+      return { ...state, isLoading: false, errors: action.payload.errors };
+
+    case SIGN_IN_FAILURE:
       return { ...state, isLoading: false, error: action.payload };
 
     default:
