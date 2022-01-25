@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import './login.css';
@@ -40,8 +40,8 @@ const Signup = () => {
     setPassword('');
   };
 
-  // const signedinUser = useSelector((state) => state.user);
-
+  const signedinUser = useSelector((state) => state.userReducer.user);
+  console.log(signedinUser);
   return (
     <div className="logIn d-flex flex-column justify-content-center align-items-center">
       <div className="header text-white p-5">

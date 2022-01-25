@@ -25,7 +25,7 @@ export const signupUser = ({ username, email, password }) => (dispatch) => {
     body: JSON.stringify({
       username,
       email,
-      password,
+      password_digest: password,
 
     }),
   })
