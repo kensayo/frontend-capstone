@@ -1,21 +1,37 @@
 import React, { useState } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import { signinUser } from '../redux/users/user';
 import './login.css';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
+  const signedinUser = useSelector((state) => state.userReducer.user);
+  console.log(signedinUser.id, 'hello');
+  const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
+  const handleUserName = (e) => {
+    setUserName(e.target.value);
   };
 
-  const handlePassWord = (e) => {
+  const handlePassword = (e) => {
     setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = {
+      username,
+      password,
+    };
+
+    dispatch(signinUser(user));
+
+    setUserName('');
+    setPassword('');
   };
 
   return (
@@ -25,13 +41,13 @@ const Login = () => {
         <p>Hello there! Sign in here</p>
       </div>
       <div className="form">
-        <form className="input-group">
+        <form className="input-group" onSubmit={handleSubmit}>
           <div className="flex-column">
             <div className="flex-column p-2">
-              <input className="row logName" type="email" name="email" onChange={handleEmail} value={email} placeholder="email" />
+              <input className="row logName" type="text" name="username" onChange={handleUserName} value={username} placeholder="userName" />
             </div>
             <div className="flex-column p-2">
-              <input className="row logName" type="password" name="password" onChange={handlePassWord} value={password} placeholder="password" />
+              <input className="row logName" type="password" name="password" onChange={handlePassword} value={password} placeholder="password" />
             </div>
             <div className="flex-column p-2">
               <input className="row submitBtn" type="submit" value="Submit" />
