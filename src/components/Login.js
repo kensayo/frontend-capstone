@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 import { signinUser } from '../redux/users/user';
 import './login.css';
 
 const Login = () => {
+  const navigate = useNavigate();
   const signedinUser = useSelector((state) => state.userReducer.user);
   console.log(signedinUser.id, 'hello');
   const [username, setUserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
 
   const dispatch = useDispatch();
 
@@ -17,21 +18,21 @@ const Login = () => {
     setUserName(e.target.value);
   };
 
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = {
       username,
-      password,
+      email,
     };
 
     dispatch(signinUser(user));
-
+    navigate('/');
     setUserName('');
-    setPassword('');
+    setEmail('');
   };
 
   return (
@@ -47,7 +48,7 @@ const Login = () => {
               <input className="row logName" type="text" name="username" onChange={handleUserName} value={username} placeholder="userName" />
             </div>
             <div className="flex-column p-2">
-              <input className="row logName" type="password" name="password" onChange={handlePassword} value={password} placeholder="password" />
+              <input className="row logName" type="email" name="email" onChange={handleEmail} value={email} placeholder="email" />
             </div>
             <div className="flex-column p-2">
               <input className="row submitBtn" type="submit" value="Submit" />

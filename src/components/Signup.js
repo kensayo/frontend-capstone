@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 import './login.css';
 import { signupUser } from '../redux/users/user';
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [username, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -34,7 +35,7 @@ const Signup = () => {
     };
 
     dispatch(signupUser(user));
-
+    navigate('/');
     setUserName('');
     setEmail('');
     setPassword('');
@@ -68,7 +69,7 @@ const Signup = () => {
       </div>
       <div className="forgot text-white p-5">
         <p>Forgot Password?</p>
-        <Link to="/">Log In</Link>
+        <Link to="/login">Log In</Link>
       </div>
     </div>
   );
