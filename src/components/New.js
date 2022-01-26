@@ -3,8 +3,8 @@ import '../App.css';
 const New = () => (
   <div className="logIn d-flex flex-column justify-content-center align-items-center">
     <div className="header text-white p-5">
-      <h1>Log In</h1>
-      <p>Hello there! Sign in here</p>
+      <h1>Add new computer</h1>
+      <p>Got something new? You can share it here!</p>
     </div>
     <div className="form">
       <form className="input-group">
