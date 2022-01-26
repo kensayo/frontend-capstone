@@ -7,6 +7,7 @@ import Login from './Login';
 import Signup from './Signup';
 import Favorite from './Favorite';
 import Navbar from './Navbar';
+import New from './New';
 
 const Routing = () => (
   <Router>
@@ -17,6 +18,7 @@ const Routing = () => (
       <Route exact path="/signup" element={<Signup />} />
       <Route exact path="/fav" element={<Favorite />} />
       <Route exact path="/nav" element={<Navbar />} />
+      <Route exact path="/new" element={<New />} />
     </Routes>
   </Router>
 );
