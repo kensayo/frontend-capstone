@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { fetchComputer } from '../redux/computers/computer';
 import './assets/home.css';
 import './assets/computer.css';
+import addFavorite from '../redux/favorite/favorite';
 
 const Home = () => {
   const { id } = useParams();
@@ -14,6 +15,13 @@ const Home = () => {
   }, []);
 
   const computer = useSelector((state) => state.computerReducer.computer);
+  const user = useSelector((state) => state.userReducer.user);
+  console.log(user, 'from computer');
+
+  const addFavoriteonClick = () => {
+    dispatch(addFavorite(user.id, computer.id));
+  };
+
   return (
     <div className="computer-detailed">
       <nav className="home-nav m-4">
@@ -35,7 +43,7 @@ const Home = () => {
 
           </p>
           <i className="fa fa-angle-down" aria-hidden="true" />
-          <div className="d-grid gap-2"><button type="button" className="btn add-favorites btn-block">Add to favorites</button></div>
+          <div className="d-grid gap-2"><button type="button" className="btn add-favorites btn-block" onClick={addFavoriteonClick}>Add to favorites</button></div>
         </div>
       </div>
     </div>
