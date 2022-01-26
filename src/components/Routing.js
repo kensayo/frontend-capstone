@@ -5,10 +5,10 @@ import { Route } from 'react-router';
 import Home from './Home';
 import Login from './Login';
 import Signup from './Signup';
-import Favorite from './Favorite';
 import Computer from './Computer';
 import Navbar from './Navbar';
 import New from './New';
+import Favorites from './Favorites';
 
 const Routing = () => (
   <Router>
@@ -18,9 +18,9 @@ const Routing = () => (
       <Route exact path="/computer/:id" element={<Computer />} />
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />
-      <Route exact path="/fav" element={<Favorite />} />
       <Route exact path="/nav" element={<Navbar />} />
       <Route exact path="/new" element={<New />} />
+      <Route exact path="/fav" element={<Favorites />} />
     </Routes>
   </Router>
 );

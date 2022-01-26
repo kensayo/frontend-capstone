@@ -5,7 +5,7 @@ import { useParams } from 'react-router';
 import { fetchComputer } from '../redux/computers/computer';
 import './assets/home.css';
 import './assets/computer.css';
-import addFavorite from '../redux/favorite/favorite';
+import { addFavorite } from '../redux/favorite/favorite';
 
 const Home = () => {
   const { id } = useParams();
