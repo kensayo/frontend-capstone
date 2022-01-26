@@ -1,5 +1,5 @@
 import '../App.css';
-import './navbar.css';
+import './assets/navbar.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
@@ -12,9 +12,7 @@ const Navbar = () => (
           <li>
             <div className="logo">
               <div>
-                <p>
-                  dofjafkhasfjkdgfjkasfgakjasgfkashfgak
-                </p>
+                <p />
               </div>
             </div>
           </li>
@@ -22,6 +20,7 @@ const Navbar = () => (
           <li><Link to="/fav" className="navLink">Favorites</Link></li>
           <li><Link to="/login" className="navLink">Login</Link></li>
           <li><Link to="/signup" className="navLink">Signup</Link></li>
+          <li><Link to="/new" className="navLink">New</Link></li>
         </ul>
       </div>
     </div>

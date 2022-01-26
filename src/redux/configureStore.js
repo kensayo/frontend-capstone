@@ -2,12 +2,12 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import computersReducer from './computers/computers';
-import favoritesReducer from './favorite/favorite';
+// import favoritesReducer from './favorite/favorite';
 import computerReducer from './computers/computer';
-import usersReducer from './users/users';
+import userReducer from './users/user';
 
 const reducers = combineReducers({
-  computersReducer, favoritesReducer, computerReducer, usersReducer,
+  computersReducer, computerReducer, userReducer,
 });
 
 const store = createStore(
