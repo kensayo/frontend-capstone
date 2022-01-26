@@ -1,14 +1,16 @@
 const URL = 'http://localhost:3000/api/v1/favorites';
-
-const addFavorite = (user, computer) => () => {
+/* eslint-disable camelcase */
+const addFavorite = (user_id, computer_id) => () => {
   fetch(URL, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
     },
     body: JSON.stringify({
-      user,
-      computer,
+      favorite: {
+        user_id,
+        computer_id,
+      },
     }),
   });
 };
