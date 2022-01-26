@@ -17,8 +17,12 @@
   width: 0;
 }
 
-.computer-img {
-  width: 100%;
+.img-background {
+  height: 150px;
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card {
@@ -27,6 +31,7 @@
 
 .card-body {
   width: 270px;
+  padding: 0 0 1rem 0!important;
 }
 
 .computer-information {

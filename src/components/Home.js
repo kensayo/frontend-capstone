@@ -23,16 +23,14 @@ const Home = () => {
       </nav>
       <div className="computers-container pt-4">
         { computersState.map((computer) => (
-
           <div className=" computer-item p-2" key={computer.id}>
             <Link to={`/computer/${computer.id}`} style={{ textDecoration: 'none', color: '#212529' }}>
               <div className="card">
-                <div className="card-body">
-
-                  <img src={computer.image} alt="computador" className="computer-img" />
+                <div className="card-body border m-3">
+                  <div className="img-background" style={{ backgroundImage: `url(${computer.image})` }} />
                   <div className="computer-information pt-4">
 
-                    <p className="computer-description">
+                    { /* <p className="computer-description">
 
                       {` Computer ${computer.brand}`}
                       ,
@@ -42,10 +40,16 @@ const Home = () => {
                       ,
                       {` Ram: ${computer.ram}`}
 
-                    </p>
-                    <p className=" computer-price">
-                      {`$${computer.price}`}
-                    </p>
+                    </p> */ }
+                    <div className="d-flex flex-column">
+                      <p>{` Computer: ${computer.brand}`}</p>
+                      <p>{` Hdd: ${computer.hdd} TB` }</p>
+                      <p>{` Processor: ${computer.processor}`}</p>
+                      <p>{` Ram: ${computer.ram}`}</p>
+                      <p className=" computer-price">
+                        {`$${computer.price}`}
+                      </p>
+                    </div>
                     <div />
                   </div>
                 </div>
