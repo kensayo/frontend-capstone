@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchFavoritesfromUser } from '../redux/favorite/favorite';
-
+/* eslint-disable  react/jsx-key */
 const Favorites = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.userReducer.user);
@@ -10,16 +10,33 @@ const Favorites = () => {
   }, []);
 
   const favoritesState = useSelector((state) => state.favoritesReducer.favorites);
-  console.log(favoritesState, 'Byeee');
 
   return (
     <div>
+      <h1 className="pt-4 mt-4">My Favorites</h1>
       <ul className="list-group">
-        <li className="list-group-item">Dapibus ac facilisis in</li>
-        <li className="list-group-item">Morbi leo risus</li>
-        <li className="list-group-item">Porta ac consectetur ac</li>
-        <li className="list-group-item">Vestibulum at eros</li>
+        {
+        (favoritesState && user)
+          ? favoritesState.map((fav) => (
+            <li className="list-group-item">
+              <p>
+                {`
+                  Computer brand  ${fav.brand}, 
+                  hard disk drive ${fav.hdd} tera,
+                  Intel Core ${fav.processor},
+                   Ram: ${fav.ram},
+                   Price: ${fav.price} dolars.
+              `}
+
+              </p>
+
+            </li>
+
+          ))
+          : <div> Please signup or signin </div>
+        }
       </ul>
+
     </div>
   );
 };
