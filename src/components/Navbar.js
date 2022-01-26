@@ -12,9 +12,7 @@ const Navbar = () => (
           <li>
             <div className="logo">
               <div>
-                <p>
-                  dofjafkhasfjkdgfjkasfgakjasgfkashfgak
-                </p>
+                <p />
               </div>
             </div>
           </li>

@@ -10,16 +10,28 @@ const New = () => (
       <form className="input-group">
         <div className="flex-column">
           <div className="flex-column p-2">
-            <input className="row logName" type="text" name="username" />
+            <label htmlFor="computer" className="text-white">
+              hdd capacity:
+              <input className="row logName" type="text" name="hdd" />
+              Processor :
+              <input className="row logName" type="text" name="processor" />
+              RAM capacity :
+              <input className="row logName" type="text" name="ram" />
+              Brand Name :
+              <input className="row logName" type="text" name="brand" />
+              Price (USD) :
+              <input className="row logName" type="text" name="price" />
+              Accessories :
+              <input className="row logName" type="text" name="accessories" />
+              Image URL :
+              <input className="row logName" type="text" name="image" />
+            </label>
           </div>
           <div className="flex-column p-2">
             <input className="row submitBtn" type="submit" value="Submit" />
           </div>
         </div>
       </form>
-    </div>
-    <div className="forgot text-white p-5">
-      <p>Forgot Password?</p>
     </div>
   </div>
 );
