@@ -20,6 +20,7 @@ const Navbar = () => (
           <li><Link to="/fav" className="navLink">Favorites</Link></li>
           <li><Link to="/login" className="navLink">Login</Link></li>
           <li><Link to="/signup" className="navLink">Signup</Link></li>
+          <li><Link to="/new" className="navLink">New</Link></li>
         </ul>
       </div>
     </div>
