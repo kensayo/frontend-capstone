@@ -16,6 +16,26 @@ export const fetchComputer = (id) => (dispatch) => {
     .then((data) => dispatch(setComputer(data)));
 };
 
+export const addComputer = (processor, hdd, ram, price, brand, image, accessories) => () => {
+  fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      computer: {
+        processor,
+        hdd,
+        ram,
+        price,
+        brand,
+        image,
+        accessories,
+      },
+    }),
+  });
+};
+
 const computerReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_COMPUTER:
