@@ -18,6 +18,26 @@ export const getComputers = () => async (dispatch) => {
     });
 };
 
+export const addComputer = (processor, hdd, ram, price, brand, image, accessories) => () => {
+  fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      computer: {
+        processor,
+        hdd,
+        ram,
+        price,
+        brand,
+        image,
+        accessories,
+      },
+    }),
+  });
+};
+
 const ComputerReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_COMPUTERS:

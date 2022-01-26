@@ -1,4 +1,6 @@
 import '../App.css';
+import './login.css';
+// import { addComputer } from '../redux/computers/computer';
 
 const New = () => (
   <div className="logIn d-flex flex-column justify-content-center align-items-center">
@@ -7,7 +9,7 @@ const New = () => (
       <p>Got something new? You can share it here!</p>
     </div>
     <div className="form">
-      <form className="input-group">
+      <div className="input-group">
         <div className="flex-column">
           <div className="flex-column p-2">
             <label htmlFor="computer" className="text-white">
@@ -28,10 +30,10 @@ const New = () => (
             </label>
           </div>
           <div className="flex-column p-2">
-            <input className="row submitBtn" type="submit" value="Submit" />
+            <button type="button" className="row submitBtn" onClick={console.log('clic')}>Add Computer</button>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 );
