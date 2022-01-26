@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { fetchComputer } from '../redux/computers/computer';
 import './assets/home.css';
@@ -8,6 +8,7 @@ import './assets/computer.css';
 import { addFavorite } from '../redux/favorite/favorite';
 
 const Home = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -20,6 +21,7 @@ const Home = () => {
 
   const addFavoriteonClick = () => {
     dispatch(addFavorite(user.id, computer.id));
+    navigate('/fav');
   };
 
   return (

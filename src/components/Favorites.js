@@ -25,7 +25,7 @@ const Favorites = () => {
                   hard disk drive ${fav.hdd} tera,
                   Intel Core ${fav.processor},
                    Ram: ${fav.ram},
-                   Price: ${fav.price} dolars.
+                   Price: ${fav.price} dollars.
               `}
 
               </p>
