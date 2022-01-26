@@ -1,30 +1,39 @@
+import React, { useState } from 'react';
 import '../App.css';
 import './assets/navbar.css';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => (
-  <div>
-    <div className="cont mt-2 mb-2">
-      <div className="navigation">
-        <input type="checkbox" className="toggle-menu" />
-        <div className="hamburger" />
-        <ul className="menu">
-          <li>
-            <div className="logo">
-              <div>
-                <p />
+const Navbar = () => {
+  const [checked, setChecked] = useState(false);
+  return (
+    <div>
+      <div className="cont mt-2 mb-2">
+        <div className="navigation">
+          <input
+            type="checkbox"
+            className="toggle-menu"
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
+          />
+          <div className="hamburger" />
+          <ul className="menu">
+            <li>
+              <div className="logo">
+                <div>
+                  <p />
+                </div>
               </div>
-            </div>
-          </li>
-          <li><Link to="/" className="navLink">Home</Link></li>
-          <li><Link to="/fav" className="navLink">Favorites</Link></li>
-          <li><Link to="/login" className="navLink">Login</Link></li>
-          <li><Link to="/signup" className="navLink">Signup</Link></li>
-          <li><Link to="/new" className="navLink">New</Link></li>
-        </ul>
+            </li>
+            <li><Link to="/" className="navLink" onClick={() => setChecked((c) => !c)}>Home</Link></li>
+            <li><Link to="/fav" className="navLink" onClick={() => setChecked((c) => !c)}>Favorites</Link></li>
+            <li><Link to="/login" className="navLink" onClick={() => setChecked((c) => !c)}>Login</Link></li>
+            <li><Link to="/signup" className="navLink" onClick={() => setChecked((c) => !c)}>Signup</Link></li>
+            <li><Link to="/new" className="navLink" onClick={() => setChecked((c) => !c)}>New</Link></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Navbar;
