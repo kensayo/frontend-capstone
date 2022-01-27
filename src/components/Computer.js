@@ -26,27 +26,29 @@ const Home = () => {
 
   return (
     <div className="computer-detailed">
+      <div />
       <nav className="home-nav m-4">
-        <Link to="/" style={{ textDecoration: 'none', color: '#212529' }}><i className="fa fa-angle-left" aria-hidden="true" /></Link>
-        <h1>{`${computer.brand} computer` }</h1>
+        <h3>{`${computer.brand} computer` }</h3>
         <div>
-          <i className="fa fa-search align-middle" aria-hidden="true" />
+          <h2><Link to="/" style={{ textDecoration: 'none', color: '#212529' }}><i className="fa fa-angle-left" aria-hidden="true" /></Link></h2>
         </div>
       </nav>
       <div className="computer-card">
-        <img src={computer.image} alt="computador" className="computer-img" />
-        <div className="mt-4">
-          <h6 className="computer-title">About this computer</h6>
-          <p className="computer-text">
-            {` Computer brand ${computer.brand} , 
-          hard disk drive ${computer.hdd} tera,
-          Intel Core ${computer.processor},
-           Ram: ${computer.ram}`}
-
-          </p>
-          <i className="fa fa-angle-down" aria-hidden="true" />
-          <div className="d-grid gap-2"><button type="button" className="btn add-favorites btn-block" onClick={addFavoriteonClick}>Add to favorites</button></div>
+        <div className="img-background" style={{ backgroundImage: `url(${computer.image})` }} />
+        <div className="mt-4 text-cont d-flex align-items-center">
+          <div className="computer-information pt-4">
+            <div className="d-flex flex-column p-3 computer-info text-center">
+              <h1>{` Computer: ${computer.brand}`}</h1>
+              <br />
+              <p className="info-text">{` Hdd: ${computer.hdd} TB` }</p>
+              <p className="info-text">{` Processor: ${computer.processor}`}</p>
+              <p className="info-text">{` Ram: ${computer.ram}`}</p>
+              <p className="info-text">{`Price: $${computer.price}`}</p>
+            </div>
+          </div>
         </div>
+        <i className="fa fa-angle-down" aria-hidden="true" />
+        <div className="d-grid gap-2"><button type="button" className="btn add-favorites btn-block" onClick={addFavoriteonClick}>Add to favorites</button></div>
       </div>
     </div>
   );

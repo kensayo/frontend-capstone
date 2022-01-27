@@ -1,3 +1,7 @@
+.home-nav {
+  padding-left: 2rem;
+}
+
 .computer-img {
   margin: 0 auto;
   float: none;
@@ -16,6 +20,14 @@
 
 .computer-title {
   font-weight: bold;
+}
+
+.text-cont {
+  height: 29.5rem;
+}
+
+.info-text {
+  font-size: x-large;
 }
 
 @media (min-width: 550px) {
