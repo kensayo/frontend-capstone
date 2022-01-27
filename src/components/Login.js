@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 import { signinUser } from '../redux/users/user';
@@ -7,8 +7,6 @@ import './assets/login.css';
 
 const Login = () => {
   const navigate = useNavigate();
-  const signedinUser = useSelector((state) => state.userReducer.user);
-  console.log(signedinUser.id, 'hello');
   const [username, setUserName] = useState('');
   const [email, setEmail] = useState('');
 
