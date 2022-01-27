@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteComputer } from '../redux/computers/computer';
+import { deleteComputer } from '../redux/computers/computers';
 
 const ItemDelete = (props) => {
   const {
