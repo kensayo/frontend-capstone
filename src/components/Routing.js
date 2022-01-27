@@ -20,7 +20,10 @@ const Routing = () => (
       <Route exact path="/signup" element={<Signup />} />
       <Route exact path="/nav" element={<Navbar />} />
       <Route exact path="/new" element={<New />} />
+
+      <Route exact path="/del" />
       <Route exact path="/fav" element={<Favorites />} />
+
     </Routes>
   </Router>
 );

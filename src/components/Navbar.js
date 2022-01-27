@@ -29,6 +29,7 @@ const Navbar = () => {
             <li><Link to="/login" className="navLink" onClick={() => setChecked((c) => !c)}>Login</Link></li>
             <li><Link to="/signup" className="navLink" onClick={() => setChecked((c) => !c)}>Signup</Link></li>
             <li><Link to="/new" className="navLink" onClick={() => setChecked((c) => !c)}>New</Link></li>
+            <li><Link to="/del" className="navLink" onClick={() => setChecked((c) => !c)}>Delete</Link></li>
           </ul>
         </div>
       </div>

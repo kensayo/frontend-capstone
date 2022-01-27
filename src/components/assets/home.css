@@ -1,3 +1,12 @@
+body {
+  background: rgb(240, 239, 244);
+  background: linear-gradient(365deg, rgba(240, 239, 244, 1) 0%, rgba(255, 255, 255, 1) 56%);
+}
+
+.home {
+  height: 100vh;
+}
+
 .home-nav {
   display: flex;
   justify-content: space-between;
@@ -9,7 +18,8 @@
 
 .computers-container {
   display: flex;
-  overflow-x: auto;
+
+  /* overflow-x: auto; */
   height: 600px;
 }
 
@@ -17,20 +27,37 @@
   width: 0;
 }
 
-.computer-img {
-  width: 100%;
+.img-background {
+  height: 225px;
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card {
   border: none !important;
+  height: 600px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .card-body {
-  width: 270px;
+  width: 350px;
+  padding: 0 0 1rem 0 !important;
 }
 
 .computer-information {
   display: flex;
   font-size: smaller;
   text-align: left;
+}
+
+.computer-info {
+  font-size: large;
+}
+
+.computer-price {
+  padding-right: 1rem !important;
 }
