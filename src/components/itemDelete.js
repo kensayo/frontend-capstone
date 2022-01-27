@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteComputer } from '../redux/computers/computers';
+import './assets/delete.css';
 
 const ItemDelete = (props) => {
   const {
@@ -16,19 +17,28 @@ const ItemDelete = (props) => {
   const remove = (id) => {
     dispatch(deleteComputer(id));
   };
+
+  const deleteClass = (id) => {
+    document.getElementById(id).className = 'delete';
+  };
   return (
-    <li>
-      <div className="d-flex flex-row my-4">
-        <p className="mx-3">Item</p>
-        <p className="mx-3">{brand}</p>
-        <p className="mx-3">{accessories}</p>
-        <p className="mx-3">{hdd}</p>
-        <p className="mx-3">{price}</p>
-        <p className="mx-3">{processor}</p>
-        <p className="mx-3">{ram}</p>
-        <button className="mx-3" type="button" onClick={() => remove(id)}>Delete</button>
-      </div>
-    </li>
+    <ul className="list-group" id={`${id}`}>
+      <li className="list-group-item li delete-l">
+
+        <p className="delete-computer">
+          {`
+            Computer brand  ${brand}, 
+            hard disk drive ${hdd} tera,
+            Intel Core ${processor},
+            Ram: ${ram},
+            Accessories: ${accessories}, 
+            Price: ${price} dollars.
+         `}
+
+        </p>
+        <button className="btn btn-danger" type="button" onClick={() => { remove(id); deleteClass(id); }}>Delete</button>
+      </li>
+    </ul>
   );
 };
 
