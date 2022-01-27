@@ -64,7 +64,6 @@ export const signinUser = ({ username, password }) => (dispatch) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       if (data.failure) {
         alert(data.failure);
       }
