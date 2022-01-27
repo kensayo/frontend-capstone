@@ -21,6 +21,7 @@ const Routing = () => (
       <Route exact path="/fav" element={<Favorite />} />
       <Route exact path="/nav" element={<Navbar />} />
       <Route exact path="/new" element={<New />} />
+      <Route exact path="/del" />
     </Routes>
   </Router>
 );

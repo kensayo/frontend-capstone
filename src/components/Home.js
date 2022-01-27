@@ -13,9 +13,9 @@ const Home = () => {
   const computersState = useSelector((state) => state.computersReducer.computers);
 
   return (
-    <div className="m-4">
+    <div className="home">
       <nav className="home-nav m-4">
-        <div><i className="fa fa-bars align-middle" aria-hidden="true" /></div>
+        <div />
         <h1>Computers</h1>
         <div>
           <i className="fa fa-search align-middle" aria-hidden="true" />
@@ -25,8 +25,8 @@ const Home = () => {
         { computersState.map((computer) => (
           <div className=" computer-item p-2" key={computer.id}>
             <Link to={`/computer/${computer.id}`} style={{ textDecoration: 'none', color: '#212529' }}>
-              <div className="card">
-                <div className="card-body border m-3">
+              <div className="card m-2">
+                <div className="card-body">
                   <div className="img-background" style={{ backgroundImage: `url(${computer.image})` }} />
                   <div className="computer-information pt-4">
 
@@ -41,14 +41,13 @@ const Home = () => {
                       {` Ram: ${computer.ram}`}
 
                     </p> */ }
-                    <div className="d-flex flex-column">
-                      <p>{` Computer: ${computer.brand}`}</p>
+                    <div className="d-flex flex-column p-3 computer-info">
+                      <h1>{` Computer: ${computer.brand}`}</h1>
+                      <br />
                       <p>{` Hdd: ${computer.hdd} TB` }</p>
                       <p>{` Processor: ${computer.processor}`}</p>
                       <p>{` Ram: ${computer.ram}`}</p>
-                      <p className=" computer-price">
-                        {`$${computer.price}`}
-                      </p>
+                      <p>{`Price: $${computer.price}`}</p>
                     </div>
                     <div />
                   </div>
