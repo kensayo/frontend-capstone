@@ -9,6 +9,7 @@ import Computer from './Computer';
 import Navbar from './Navbar';
 import New from './New';
 import Favorites from './Favorites';
+import Delete from './Delete';
 
 const Routing = () => (
   <Router>
@@ -21,7 +22,7 @@ const Routing = () => (
       <Route exact path="/nav" element={<Navbar />} />
       <Route exact path="/new" element={<New />} />
 
-      <Route exact path="/del" />
+      <Route exact path="/delete" element={<Delete />} />
       <Route exact path="/fav" element={<Favorites />} />
 
     </Routes>

@@ -16,6 +16,11 @@ export const fetchComputers = () => (dispatch) => {
     .then((data) => dispatch(setComputers(data)));
 };
 
+export const deleteComputer = (id) => (dispatch) => {
+  fetch(`${URL}/computers/${id}`, { method: 'DELETE' })
+    .then(() => fetchComputers(dispatch));
+};
+
 const computersReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_COMPUTERS:

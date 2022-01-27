@@ -1,0 +1,12 @@
+.delete-computer {
+  text-align: left;
+}
+
+.delete-l {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  display: none;
+}
