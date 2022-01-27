@@ -36,6 +36,11 @@ export const addComputer = (processor, hdd, ram, price, brand, image, accessorie
   });
 };
 
+export const deleteComputer = (id) => {
+  fetch(`${URL}/${id}`, { method: 'DELETE' })
+    .then(() => this.setState({ status: 'Delete successful' }));
+};
+
 const computerReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_COMPUTER:
