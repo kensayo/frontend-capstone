@@ -13,10 +13,10 @@ const Home = () => {
   const computersState = useSelector((state) => state.computersReducer.computers);
 
   return (
-    <div className="home">
-      <nav className="home-nav m-4">
+    <div className="home m-4">
+      <nav className="home-nav m-sd-4">
         <div />
-        <h1>Computers</h1>
+        <h1 className="pt-md-5 mt-md-5">Computers</h1>
         <div>
           <i className="fa fa-search align-middle" aria-hidden="true" />
         </div>
@@ -29,18 +29,6 @@ const Home = () => {
                 <div className="card-body">
                   <div className="img-background" style={{ backgroundImage: `url(${computer.image})` }} />
                   <div className="computer-information pt-4">
-
-                    { /* <p className="computer-description">
-
-                      {` Computer ${computer.brand}`}
-                      ,
-                      {` Hdd: ${computer.hdd} tera` }
-                      ,
-                      {` Intel Core ${computer.processor}`}
-                      ,
-                      {` Ram: ${computer.ram}`}
-
-                    </p> */ }
                     <div className="d-flex flex-column p-3 computer-info">
                       <h1>{` Computer: ${computer.brand}`}</h1>
                       <br />

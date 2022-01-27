@@ -28,8 +28,8 @@ const Delete = () => {
     );
   });
   return (
-    <div>
-      <h1 className="pt-4 mt-4">Delete Computers</h1>
+    <div className="pt-4 mt-4 pt-sd-2 mt-sd-2 ">
+      <h1 className="pt-md-5 mt-md-5">Delete Computers</h1>
       <ul className="list-group">
         {item}
       </ul>

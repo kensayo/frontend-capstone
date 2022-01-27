@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchFavoritesfromUser } from '../redux/favorite/favorite';
-/* eslint-disable  react/jsx-key */
+
 const Favorites = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.userReducer.user);
@@ -12,13 +12,13 @@ const Favorites = () => {
   const favoritesState = useSelector((state) => state.favoritesReducer.favorites);
 
   return (
-    <div>
-      <h1 className="pt-4 mt-4">My Favorites</h1>
+    <div className="pt-4 mt-4 pt-sd-2 mt-sd-2">
+      <h1 className="pt-md-5 mt-md-5">My Favorites</h1>
       <ul className="list-group">
         {
         (favoritesState && user)
           ? favoritesState.map((fav) => (
-            <li className="list-group-item">
+            <li className="list-group-item" key={fav.id}>
               <p>
                 {`
                   Computer brand  ${fav.brand}, 
