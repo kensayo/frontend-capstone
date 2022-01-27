@@ -36,7 +36,7 @@ const ItemDelete = (props) => {
          `}
 
         </p>
-        <button className="btn btn-danger" type="button" onClick={() => { remove(id); deleteClass(id); }}>Delete</button>
+        <button className="fill" type="button" onClick={() => { remove(id); deleteClass(id); }}>Delete</button>
       </li>
     </ul>
   );
