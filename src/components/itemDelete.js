@@ -22,7 +22,7 @@ const ItemDelete = (props) => {
     document.getElementById(id).className = 'delete';
   };
   return (
-    <ul className="list-group" id={`${id}`}>
+    <ul className="list-group p-2" id={`${id}`}>
       <li className="list-group-item li delete-l">
 
         <p className="delete-computer">

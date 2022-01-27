@@ -4,6 +4,8 @@ body {
 
 .delete-computer {
   text-align: left;
+  background-color: rgba(186, 255, 180, 0.619);
+  padding: 0.5rem;
 }
 
 .delete-l {
