@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches home component snapshot 1`] = `
+<div
+  className="home m-4"
+>
+  <nav
+    className="home-nav m-sd-4"
+  >
+    <div />
+    <h1
+      className="pt-md-5 mt-md-5"
+    >
+      Computers
+    </h1>
+    <div>
+      <i
+        aria-hidden="true"
+        className="fa fa-search align-middle"
+      />
+    </div>
+  </nav>
+  <div
+    className="computers-container pt-4"
+  />
+</div>
+`;
