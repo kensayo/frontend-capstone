@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ItemDelete = (props) => {
   const {
     processor,
@@ -30,3 +32,11 @@ const ItemDelete = (props) => {
 
 export default ItemDelete;
 
+ItemDelete.propTypes = {
+  processor: PropTypes.string.isRequired,
+  hdd: PropTypes.string.isRequired,
+  ram: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  accessories: PropTypes.string.isRequired,
+};

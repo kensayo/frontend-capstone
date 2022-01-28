@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Computer = (props) => {
   const {
@@ -29,6 +30,15 @@ const Computer = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Computer;
+
+Computer.propTypes = {
+  image: PropTypes.string.isRequired,
+  hdd: PropTypes.string.isRequired,
+  ram: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  processor: PropTypes.string.isRequired,
+};
