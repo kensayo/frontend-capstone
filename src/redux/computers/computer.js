@@ -1,4 +1,3 @@
-// http://localhost:3000/api/v1/computers
 const SET_COMPUTER = 'frontend-capstone/computer/SET_COMPUTER';
 const URL = 'http://localhost:3000/api/v1/computers';
 

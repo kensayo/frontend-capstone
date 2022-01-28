@@ -6,7 +6,6 @@ import '../App.css';
 
 const Delete = () => {
   const dispatch = useDispatch();
-  // const user = useSelector((state) => state.userReducer.user);
   useEffect(() => {
     dispatch(fetchComputers());
   }, []);
@@ -38,10 +37,4 @@ const Delete = () => {
   );
 };
 
-/*
-{
-  (user)
-    ? <div>{item}</div> : <div> Please signup or signin </div>
-}
-*/
 export default Delete;
