@@ -4,7 +4,7 @@
 
 > Frontend app where you can rent and add computers to favorites. If you want to see the project working properly you need to clone/download [the backend app](https://github.com/kensayo/backend-capstone/)
 
-
+> Design provided by [Alexey Savitskiy](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App))
 ## 👷🏻 Built using
 
     - React
