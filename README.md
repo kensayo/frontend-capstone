@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Backend for Computers Capstone Project
 
-## Available Scripts
+> Frontend app where you can rent and add computers to favorites. If you want to see the project working properly you need to clone/download [the backend app](https://github.com/kensayo/backend-capstone/)
 
-In the project directory, you can run:
+> Design provided by [Alexey Savitskiy](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App))
+## 👷🏻 Built using
 
-### `npm start`
+    - React
+    - JavaScript
+    - Redux
+    - VSCode
+    - GIT
+    - Github
+    - CSS
+    - Bootstrap
+    - Linters
+    - Jest
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚩 Getting Started
 
-### `npm test`
+To get a local copy up and running follow these simple example steps.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ✅ Prerequisites
 
-### `npm run build`
+* Make sure that **Node JS** is installed in your computer (try to run _npm -v_ from your prompt), if not you can install it from [here.](https://nodejs.org/en/download/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* [Download](https://github.com/kensayo/frontend-capstone/archive/refs/heads/development.zip) and unzip **or** [clone this repository](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Clone/download [the backend app](https://github.com/kensayo/backend-capstone/) and follow instructions to run backend properly
 
-### `npm run eject`
+### 👨🏻‍🔧 Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Open your terminal and move to the root of the project, using ```$ cd``` command.
+- Run ```$ npm install``` to install all dependencies.
+- You must run ```$ npm start``` to start live server
+- Then your browser will open a local copy
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔌 Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- You can go to http://localhost:4006/ to use the app locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📝 Kanban Board
 
-## Learn More
+- Front End
+   - [Kanban Board Frontend](https://github.com/kensayo/frontend-capstone/projects/1)
+- Back End
+   - [Kanban Board Backend](https://github.com/kensayo/backend-capstone/projects/1)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> ### Front End
+![kanban-frontend](https://user-images.githubusercontent.com/10082542/149413110-d6695d24-4d57-4e6f-a879-cc535cf5c445.png)
 
-### Code Splitting
+> ### Back End
+![kanban-backend](https://user-images.githubusercontent.com/10082542/149413038-ab5388fc-acdb-415f-a77a-65c3a2bb733e.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **The project was developed by 3 members (@Rocio01, @kensayo, @SunnySparks)**
 
-### Analyzing the Bundle Size
+## 🤝 Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 👨🏻‍💻 Kenny Ortega
 
-### Making a Progressive Web App
+- GitHub: [@kensayo](https://github.com/kensayo)
+- Twitter: [@kensayo](https://twitter.com/kensayo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kennyortega/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 👨🏻‍💻 Sunny Diaz
 
-### Advanced Configuration
+- GitHub: [@SunnySparks](https://github.com/SunnySparks)
+- Twitter: [@JosfranT6](https://twitter.com/JosFranT6)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jose-f-silva/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 👩‍💻 Rocio Martinez
+- Github: [@Rocio01](https://github.com/Rocio01)
+- Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
+- Linkedin: [Zulma Rocio Martinez](https://www.linkedin.com/in/zulma-rocio-martinez)
 
-### Deployment
+## 🤝🏻 Contributions and issues are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📜 License
+This project is [MIT](./MIT.md) licensed.
