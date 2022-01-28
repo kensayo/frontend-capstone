@@ -17,7 +17,6 @@ const Home = () => {
 
   const computer = useSelector((state) => state.computerReducer.computer);
   const user = useSelector((state) => state.userReducer.user);
-  console.log(user, 'from computer');
 
   const addFavoriteonClick = () => {
     dispatch(addFavorite(user.id, computer.id));
